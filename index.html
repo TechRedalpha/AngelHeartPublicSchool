@@ -20,11 +20,12 @@
     gtag('config', 'G-LCV3ZL24YF');
     </script>
 <style>
-    .container1 {
+   /* General Styles */
+.container1 {
     width: 100%;
     background-color: #fffffff2; /* Light background color */
-    padding: 0px 0px;
-    margin-left: -40px;
+    padding: 0px; /* Default padding */
+    margin-left: 0; /* Default alignment */
     overflow: hidden;
 }
 
@@ -43,7 +44,7 @@
 
 #dynamic-notice {
     font-size: 16px;
-    color: #ff0000; /* Blue color */
+    color: #ff0000; /* Red color */
     font-weight: bold;
 }
 
@@ -53,6 +54,34 @@
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    #dynamic-notice {
+        font-size: 14px; /* Slightly smaller font for tablets */
+    }
+    .container1 {
+        padding: 8px; /* Adjusted padding for better spacing */
+    }
+    .notice-ticker-wrapper {
+        overflow: hidden;
+    }
+    .notice-ticker {
+        animation: scroll-ticker 12s linear infinite; /* Slightly slower for readability */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #dynamic-notice {
+        font-size: 12px; /* Smaller font for mobile screens */
+    }
+    .container1 {
+        padding: 5px; /* Further reduced padding for small devices */
+    }
+    .notice-ticker {
+        animation: scroll-ticker 15s linear infinite; /* Slowest speed for small screens */
     }
 }
 
@@ -235,16 +264,7 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <div class="container1">
-                                    <div class="notice-ticker-wrapper">
-                                        <div class="notice-ticker">
-                                            <span id="dynamic-notice">
-                                                Welcome to our website! - Next Admission starting soon - Next Fest coming soon... 
-                                                <a href="#edu-event-area" id="click-here-link" style="color: blue; text-decoration: underline;">Click Here</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 
                             </nav>
                         </div>
@@ -261,6 +281,16 @@
                     </div>
                 </div>
             </div>
+            <div class="container1">
+                <div class="notice-ticker-wrapper">
+                    <div class="notice-ticker">
+                        <span id="dynamic-notice">
+                            Welcome to our website! - Next Admission starting soon - Next Fest coming soon... 
+                            <a href="#edu-event-area" id="click-here-link" style="color: blue; text-decoration: underline;">Click Here</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
             <div class="popup-mobile-menu">
                 <div class="inner">
                     <div class="header-top">
@@ -269,17 +299,21 @@
                                 <img class="logo-light" src="assets/images/logo/as.png" alt="School Section Logo">
                             </a>
                         </div>
+                        
                         <div class="close-menu">
                             <button class="close-button">
                                 <i class="icon-73"></i>
                             </button>
                         </div>
                     </div>
+
                     <ul class="mainmenu">
                         <li class="highlight"><a>Home</a></li>
                         <li><a href="index.html#about">About Us</a></li>
                         <li><a href="index.html#history">History</a></li>
                         <li><a href="index.html#faqs">FAQs</a></li>
+                        <li><a href="contact.html">Admin Login</a></li>
+                        <li><a href="contact.html">Teachers Login</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li class="has-droupdown"><a href="#">Agreements</a>
@@ -294,7 +328,10 @@
                                 <li><a href="terms-condition.html">Notes & Regular Assesments</a></li>
                             </ul>
                         </li>
+                    
                     </ul>
+
+                    
                     
                 </div>
             </div>
